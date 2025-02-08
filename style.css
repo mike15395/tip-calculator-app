@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+--Very-dark-cyan: hsl(183, 100%, 15%);
+--Dark-grayish-cyan: hsl(186, 14%, 43%);
+--Grayish-cyan: hsl(184, 14%, 56%);
+--Light-grayish-cyan: hsl(185, 41%, 84%);
+--Very-light-grayish-cyan: hsl(189, 41%, 97%);
+--White: hsl(0, 0%, 100%);
+--Strong-cyan: hsl(172, 67%, 45%);
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--Light-grayish-cyan);
+    font-family: 'Space Mono';
+    gap: 10%;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    color: var(--Very-dark-cyan);
+    font-weight: 400;
+    font-size: 24px;
+    font-family: 'Space Mono';
+    letter-spacing: 7px;
+}
+.main-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: "input output";
+    width: 55vw;
+    height: 60vh;
+    background-color: var(--White);
+    border-radius: 10px;
+    padding: 2%;
+    gap:25px;
+}
+
+.bill-input-container,.number-people-container,.select-tip-container{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.bill-input-container label{
+   color: var(--Very-dark-cyan);
+   font-weight: 400;
+}
+
+.tip-value-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 10px;
+
+}
+
+.tip-value-container div{
+    padding: 5%;
+    background-color: var(--Very-dark-cyan);
+    color: white;
+    font-weight: bold;
+    font-size: larger;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.tip-value-container input{
+    padding: 5%;
+    width: 100%;
+    background-color: var(--Very-light-grayish-cyan);
+    border: none;
+}
+.input-section{
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+    grid-area: input;
+}
+
+#bill-input,#people-count-input,#custom-tip-input{
+    background: var(--Very-light-grayish-cyan);
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    font-size: 24px;
+    text-align: right;
+    color: var(--Very-dark-cyan);
+    font-weight: bold;
+    font-family: 'Space Mono';
+}
+
+.bill-input-sub-container, .number-people-sub-container{
+    position: relative;
+
+}
+
+.bill-input-sub-container img , .number-people-sub-container img{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+   
+}
+
+.output-section{
+    background-color: var(--Very-dark-cyan);
+    color: var(--White);
+    padding: 8%;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    grid-area: output;
+}
+
+
+.output-sub-section{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.tip-output-container,.tip-amount-text{
+    display: flex;
+    justify-content: space-between;
+}
+
+.tip-amount-container,.total-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.total,.tip-amount{
+    color: var(--White);
+    font-size: large;
+    font-weight: 300;
+}
+
+.per-person{
+    color: var(--Grayish-cyan);
+
+}
+
+.tip-amount-output ,.tip-total-output{
+    color: var(--Strong-cyan);
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.reset-button{
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+    font-weight: bold;
+    padding: 4%;
+    border-radius: 5px;
+    border: none;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.reset-button :hover{
+    background-color: var(--Light-grayish-cyan);
+}
+
+@media all and (max-width:768px){
+    .main-container{
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2,1fr);
+        grid-template-areas: "input"
+        "output";
+        height: 90vh;
+        width: 50vw;
+    }
+    .input-section,.output-section{
+        width: 100%;
+        height: 100%;
+    }
+    body{
+        gap:0px
+    }
+    
+}
