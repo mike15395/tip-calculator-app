@@ -58,8 +58,8 @@ function calculateOutput(selectedValue) {
 }
 
 resetButton.addEventListener("click", function () {
-  tipAmount.textContent = "";
-  tipTotal.innerHTML = "";
+  tipAmount.textContent = "$0.00";
+  tipTotal.innerHTML = "$0.00";
   billInput.value = "";
   totalPeople.value = "";
   customTip.value = "";
