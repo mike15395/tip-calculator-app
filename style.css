@@ -42,7 +42,7 @@ header{
     grid-template-rows: 1fr;
     grid-template-areas: "input output";
     width: 65vw;
-    height: fit-content;
+    height: 65vh;
     background-color: var(--White);
     border-radius: 10px;
     padding: 2%;
